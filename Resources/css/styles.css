@@ -1,0 +1,456 @@
+/*Import the fonts used*/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/*Basic reset*/
+*,
+*::before,
+*::after { /*In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Custom properties*/
+:root {
+    --dark-color: #2d2c2c;
+    --purple-solid: #350a4f;
+    --purple-transparent: rgba(53, 10, 79, .7);
+    --purple-transparent-alt: rgba(53, 10, 79, .5);
+    --purple-light: #8f50fb;
+    --yellow-solid: #fa9e2c;
+    --gradient-color: linear-gradient(to right, var(--yellow-solid), var(--purple-light));
+    --gradient-color-alt: linear-gradient(to right, var(--purple-light), var(--yellow-solid));
+}
+
+
+/*---------------------------------------------*/
+/*GLOBAL*/
+/*---------------------------------------------*/
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Open sans', 'sans-serif';
+    font-size: 1.6rem;
+    color: #2d2c2c;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #2d2c2c;
+}
+
+ul{
+    list-style: none;
+}
+
+/*---------------------------------------------*/
+/*RESPONSIVE WEBPAGE SETUP*/
+/*---------------------------------------------*/
+
+.row{ /*this helps setup a responsive webpage*/ /*response webpages are designed in columns and rows. As content on this webpage is defined in rows, this helps setup a responsive webpage by defining the row width*/
+    
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto; /*top and bottom is 0, left and right will be auto*/
+    padding: 0 1.5rem;
+    
+}
+
+section{
+    padding: 50px 0;  
+}
+
+/*---------------------------------------------*/
+/*Reusable content*/
+/*---------------------------------------------*/
+
+/*container{
+    width: 100%;
+    padding: 120rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}*/
+
+
+/*---------------------------------------------*/
+/*HEADER BOX FORMATTING*/
+/*---------------------------------------------*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 0;
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(53, 10, 79, .7);
+    z-index: 1;
+}
+
+.main-navigation-box { /*set container for header box as flex container*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1140px;
+    overflow: hidden;
+}
+
+.logo{
+    max-width: 80%;
+}
+
+.icon-search{
+    display: flex;
+    color: white;
+    z-index: 1;
+}
+
+/*---------------------------------------------*/
+/*TITLE FORMATTING*/
+/*---------------------------------------------*/
+
+.hero{
+    display: flex;
+    background: linear-gradient(rgba(53, 10, 79, .5), rgba(53, 10, 79, .5)), url(images/hero_background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-textbox{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    text-shadow: 1px 1px 1rem rgb(0, 0, 0,.5);
+    margin-bottom: 2.5rem;
+}
+
+.title{
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12rem;
+}
+
+.subtitle{
+    font-size: 10rem;
+    font-family: 'Kaushan Script';
+    color: white;
+    margin-bottom: 20px;
+}
+
+/*---------------------------------------------*/
+/*MAIN NAVIGATION*/
+/*---------------------------------------------*/
+
+.main-navigation{ /*set container for navigational menu as flex container to put them side by side*/
+    display: flex;
+    align-content: center;
+}
+
+.main-navigation li:last-child{
+    margin-right: 100px;
+}
+
+.main-navigation li{
+    margin: 10px 20px;
+}
+
+.main-navigation a:link,
+.main-navigation a:visited{
+    position: relative;
+    padding: 8px 0;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 80%;
+}
+
+/*creating gradient border for links*/
+
+/*in essence, what the following does is create a border that is independent of the hyperlink. 
+
+This was done by using the "content" tag to create an area that is blank/empty that is situated after/behind the existing navigation and is able to be styled. You can check this by changing the height to 100%, making the height of the area the size of the defined margin value above
+
+As shown below, the border is styled via the following: the border is 100% the width of the hyperlink, it starts from 0 on the left and is flipped upside down via bottom: -1px to create an underline. The thickness is determined via the height of 2px, and the background of the area is the gradient colour*/
+
+.main-navigation li a::after,
+.main-navigation li a::after{
+    opacity: 0;
+    content:''; /*The content property is used with the ::before and ::after pseudo-elements, to insert generated content.*/ /*this has to be blank so that nothing is inserted*/
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px; /*this flips the content, so the line is now on the bottom instead of the top*/
+    height: 2px; /*thickness of the underline*/
+    background: var(--gradient-color);
+    transition: all 0.3s ease;
+}
+
+.main-navigation li a:hover::after,
+.main-navigation li a:active::after{
+    opacity: 1;
+}
+
+.icon-search i{
+    color: white;
+    font-size: 25px;
+    /*https://www.w3schools.com/cssref/css3_pr_transform.asp*/
+    transition: all 0.2s ease;
+}
+
+.icon-search i:hover{
+    color: orange;
+}
+
+.icon-search{
+    transform: scaleX(-1);
+}
+
+
+/*---------------------------------------------*/
+/*BUTTONS*/
+/*---------------------------------------------*/
+
+
+.button:link,
+.button:visited,
+input[type=submit]{ /*<input> elements of type submit are rendered as buttons. When the click event occurs (typically because the user clicked the button), the user agent attempts to submit the form to the server.*/
+    margin-top: 10px;
+    display: inline-flex;
+    color: #fff;
+    border: none;
+    border-radius: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.45rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px 5%;
+    text-transform: uppercase;
+    background-size: 200% auto; /*this is necessary, by putting the background size at 200% on top and bottom it makes the gradient bigger than the container. This allows the transition/animationi to occur*/
+}
+
+.button_yellow_purple:link,
+.button_yellow_purple:visited,
+input[type=submit]{
+    color: white;
+    background-image: linear-gradient(to right, #fa9e1b, #8d4fff, #fa9e1b);
+    transition: all 0.4s ease;
+}
+
+.button_yellow_purple:hover,
+.button_yellow_purple:active, /*The :active CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.*/
+input[type=submit]:hover,
+input[type=submit]:active{
+    color: white;
+    background-position: right center; /*The background-position property sets the starting position of a background image. If you only specify one keyword, the other value will be "center". https://www.w3schools.com/cssref/pr_background-position.asp*/
+}
+
+.button_purple:link,
+.button_purple:visited,
+input[type=submit]{
+    background-color: #350a4f;
+    width: 15%;
+    transition: all 0.2s ease;
+    vertical-align: middle;
+    margin-top: -10px;
+}
+
+.button_purple:hover,
+.button_purple:active,
+input[type=submit]{
+    background-color: rgba(53, 10, 79, 0.78);
+}
+
+.dots i{
+    font-size: 4rem;
+    padding-left: 5px;
+    background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.31));
+    background-clip: text; /*The background-clip property defines how far the background (color or image) should extend within an element.*/ /*text - The background is painted within (clipped to) the foreground text.*/
+    color: transparent; /*Sets the colour of the text - In this case it needs to be transparent otherwise the gradient above won't work*/
+}
+
+/*---------------------------------------------*/
+/*SEARCH TABS BAR*/
+/*---------------------------------------------*/
+
+.search_tabs_container{
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    width: 100%;
+    z-index: 1000000; 
+}
+
+.search_row{
+    display: inline-flex;
+    width: 90%;
+    height: 94px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*General tabs*/
+
+.search_tabs{
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+    width: calc(100% / 6);
+    height: 100%l;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.search_tabs i{
+    font-size: 3rem;
+    margin: 15px;
+    color: #fa9e2c;
+}
+
+.search_tabs img{
+    margin-right: 10px;
+}
+
+.flights img,
+.car_rental img,
+.cruises img{
+    width: auto;
+    height: 17px;
+}
+
+.search_tabs span{
+    color: #2d2c2c;
+}
+
+.search_tabs:hover,
+.search_tabs:active,
+input[type=submit]{
+    background-color: #fa9e2c;
+    color: #fff;
+    
+}
+
+.search_tabs i:hover,
+.search_tabs i:active,
+input[type=submit]{
+    filter: brightness(200%) grayscale(100%);
+}
+
+/*First tab*/
+
+.hotels{
+    border-top-left-radius: 90px;
+    background-color: #fa9e2c;
+    color: white;
+    padding-left: 5%;
+}
+
+.hotels img{
+    filter: brightness(200%) grayscale(100%);
+    width: auto;
+    height: 30px;
+}
+
+/*Last tab*/
+
+.activities{
+    border-top-right-radius: 90px;
+    padding-right: 160px;
+}
+
+.activities img{
+    width: auto;
+    height: 30px;
+}
+
+
+/*---------------------------------------------*/
+/*QUICK SEARCH SECTION*/
+/*---------------------------------------------*/
+         
+.quick-search {
+    background-image: var(--gradient-color);
+    text-align: center;
+    vertical-align: middle;
+    height: 210px
+}
+
+.input-group{
+    display: inline-block;
+    margin: 1.2rem 0;
+}
+
+.input-label{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+input[type=text],
+input[type=date],
+select{
+    width: 97%;
+    margin: 10px 20px 20px 0;
+    height: 45px;
+    padding: 2px;
+    border: none;
+    vertical-align: middle;
+    color: rgba(111, 111, 111, 0.76)
+}
+
+.destination{
+    width: 30%;
+    margin-right: -0.3%;
+}
+
+.check-in,
+.check-out{
+    width: 15%;
+    margin-right: 2px;
+}
+
+.Adults,
+.Children{
+    font-family: 'Open sans', 'sans-serif';
+    width: 10%;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.Children{
+    margin-right: 5px;
+}
+
+
+
+
+
+
+

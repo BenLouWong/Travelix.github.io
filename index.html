@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" type="text/css" href="Vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="Vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="Vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="Resources/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="Resources/css/queries.css">
+    
+    <title>Travelix</title>
+    <!--Font awesome CDN-->
+   
+</head>
+    
+<body>
+
+    <header class="header">
+    
+        <nav>
+        
+            <div class="row">    
+                <div class="main-navigation-box">
+                    <a>
+                        <img src="Resources/images/logo.png" alt="Travelix logo" class="logo">
+                    </a>
+                    <!--<div class="hamburger-menu">
+                        <i class="ion-navicon-round mobile-nav-bars"></i>
+                        <i class="ion-close-round mobile-nav-close"></i>   
+                    </div>-->
+                    <ul class="main-navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>    
+                    <div class="icon-search">
+                        <a href="#">
+                            <i class="ion-ios-search-strong"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        </nav>
+    
+    </header>
+    
+    <main> <!--The <main> tag specifies the main content of a document.-->        
+        <div class="hero">
+        
+            <div class="row">
+                <div class="hero-textbox">
+                    <h1 class="title">Discover</h1>
+                    <h2 class="subtitle">the world</h2>
+                </div>
+                <a class="button button_yellow_purple" href="#">Explore Now
+                    <span class="dots">
+                        <i class="ion-ios-more"></i>
+                    </span> <!--span is an inline container used to markup a part of a text or a part of a document. The span tag is easiliy styled by CSS or manipulated with JavaScript using the class or id attribute. Span acts in the same way as a div element exccept the span is an inline element-->
+                </a>
+            </div>
+            
+            <div class="search_tabs_container" id="search_tabs_container">
+        
+                <div class="row">
+                    
+                    <div class="search_row">
+                    
+                        <a class="search_tabs hotels" href="#">
+                            <img src="Resources/images/suitcase.png">
+                            Hotels
+                        </a>
+                        
+                        <a class="search_tabs flights" href="#">
+                            <img src="Resources/images/departure.png">
+                            Flights
+                        </a>
+
+                        <a class="search_tabs trips" href="#">
+                            <img src="Resources/images/island.png">
+                            Trips
+                        </a>
+
+                        <a class="search_tabs car_rental" href="#">
+                            <img src="Resources/images/bus.png">
+                            Car Rental
+                        </a>
+
+                        <a class="search_tabs cruises" href="#">
+                            <img src="Resources/images/cruise.png">
+                            Cruises
+                        </a>
+
+                        <a class="search_tabs activities" href="#">
+                            <img src="Resources/images/diving.png">
+                            Activities
+                        </a>
+                    
+                    </div>
+
+                </div>
+        
+            </div>
+            
+        </div>
+        
+        <section class="quick-search" id="quick-search">
+        
+            <div class="row">
+                
+                <div class="input-group destination">
+                    <label for="name" class="input-label">Destination</label>
+                    <input type="text" class="input" name="destination" id="destination" placeholder=" Where do you want to go?" required>
+                </div>
+                
+                <div class="input-group check-in">                       <label for="check-in" class="input-label">Check In</label>
+                    <input type="date" class="input" name="check-in" id="check-in" required>
+                </div>
+                
+                <div class="input-group check-out">
+                    <label for="check-out" class="input-label">Check Out</label>
+                    <input type="date" class="input" name="check-out" id="check-out" required>
+                </div>
+                
+                <div class="input-group Adults">
+                    <label for="Adults" class="input-label">Adults</label>
+                    <select name="Adults" id="Adults">
+                        <option value="5+">5+</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                </div>
+                
+                <div class="input-group Children">
+                    <label for="Children" class="input-label">Children</label>
+                    <select name="Children" id="Children">
+                        <option value="5+">5+</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                </div>
+
+                <a class="button button_purple" href="#">Search
+                    <span class="dots">
+                        <i class="ion-ios-more"></i>
+                    </span>
+                </a>
+                
+            </div>
+        
+        </section>
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    
+    
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="Vendors/javascript/jquery-ui.js"></script>
+    <script src="Vendors/javascript/jquery.waypoints.min.js"></script>
+    <script src="Resources/javascript/main.js"></script>
+    
+</body>
+    
+</html>
