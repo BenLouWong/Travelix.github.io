@@ -1,0 +1,243 @@
+/*---------------------------------------------*/
+/*Tablets in landscape: widths smaller than 1350px*/
+/*---------------------------------------------*/
+
+@media only screen and (max-width:1350px){ /*media rule is used in media queries to apply difference styles for different media types/devices. Can be used to check many things such as width and heigh of the viewport, width and height of the device, orientation and resolution*/ /*There are several keywords used wtith @media: 1. not = the not keyword reverst the meaning of an entire media query. 2 = The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. it has no effect on modern browsers. 3 and = combines a media features with a media type or other media features*/ /*https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+    
+    .contact_box{
+        margin: 0;
+        transform: translateX(400px)
+    }
+    
+}
+
+/*---------------------------------------------*/
+/*Tablets in landscape: widths smaller than 1140px*/
+/*---------------------------------------------*/
+
+@media only screen and (max-width:1200px){ /*media rule is used in media queries to apply difference styles for different media types/devices. Can be used to check many things such as width and heigh of the viewport, width and height of the device, orientation and resolution*/ /*There are several keywords used wtith @media: 1. not = the not keyword reverst the meaning of an entire media query. 2 = The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. it has no effect on modern browsers. 3 and = combines a media features with a media type or other media features*/ /*https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+
+    .icon-search{
+        display: none;
+    }
+    
+/*---------------------------------------------*/
+/*Mobile Navigation*/
+/*---------------------------------------------*/
+    
+    .main-navigation-box{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .main-navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--gradient-color-alt);
+        z-index: 1400;
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    .main-navigation-box img{
+        margin-right: 90rem;
+    }
+    
+    .hamburger-menu{
+        display: block;
+        font-size: 40px;
+        z-index: 1500;
+    }
+    
+    .close-hamburger-menu{
+        display: none;
+    }
+    
+    /*When hamburger menu is clicked, trigger the following*/
+    
+    .menu-open .main-navigation{
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 0.3s ease;
+    }
+    
+    .menu-open .close-hamburger-menu{
+        display: block;
+        z-index: 1600;
+    }
+    
+    .menu-open .hamburger-menu{
+        display: none;
+    }    
+    
+    /*-------------*/
+    
+    .main-navigation li:last-child{
+        margin:0;
+        margin-top: 10px;
+    }
+    
+    .main-navigation li{
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+/*---------------------------------------------*/
+/* SEARCH TABS */
+/*---------------------------------------------*/
+    
+    .search_row{
+        display: none;
+    }
+    
+/*---------------------------------------------*/
+/*QUICK SEARCH BAR*/
+/*---------------------------------------------*/
+    
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px;
+    }
+    
+    .quick_search_button{
+        margin: 10px 1000px 10px 0;
+    }
+    
+/*---------------------------------------------*/
+/*SHORTLIST CONTENT*/
+/*---------------------------------------------*/
+
+    .shortlist_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .shortlist_box{
+        width: 100%;
+        margin-left: 0; 
+    }
+    
+    .shortlist_icons{
+        margin: 20px 0;
+    }
+    
+    .shortlist_image{
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+        margin: 30px 0;
+    }
+    
+    .shortlist_image img{
+        height: 800px;
+    }
+    
+/*---------------------------------------------*/
+/*TESTIMONIALS CONTENT*/
+/*---------------------------------------------*/
+
+    .user_name_box{
+        display: none;
+        margin-bottom: -30%;
+    }
+  
+/*---------------------------------------------*/
+/*TRENDING CONTENT*/
+/*---------------------------------------------*/
+    
+    .trending_information{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .trending_information_hotel{
+        margin: 0;
+    }
+    
+   /* .trending_content{
+        display: flex;
+        flex-direction: 
+    }
+    
+    .trending_information{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .trending_information_hotel{
+        margin: 0;
+    }*/
+    
+/*---------------------------------------------*/
+/*INTRO CONTENT*/
+/*---------------------------------------------*/
+    
+    /*.intro_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .intro_content_style, 
+    .intro_content img{
+        width: 50%;
+        height: 500px;
+        margin-left: -1px;
+    }
+    
+    .box_title{
+        margin-top: -550px;
+    }*/
+    
+}
+
+/*---------------------------------------------*/
+/*Tablets in portrait: from 768px to 1023px*/
+/*---------------------------------------------*/
+
+@media only screen and (max-width:1023px){ /*media rule is used in media queries to apply difference styles for different media types/devices. Can be used to check many things such as width and heigh of the viewport, width and height of the device, orientation and resolution*/ /*There are several keywords used wtith @media: 1. not = the not keyword reverst the meaning of an entire media query. 2 = The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. it has no effect on modern browsers. 3 and = combines a media features with a media type or other media features*/ /*https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+
+    
+    
+}
+
+/*---------------------------------------------*/
+/*Larger phones: from 481 to 767px*/
+/*---------------------------------------------*/
+
+@media only screen and (max-width:767px){ /*a media query is a rule that is used to incldue a block of CSS properties only if a certain condition is true. in this case the below features are only applicable when the width of hte window is less than or equal to 767px */
+
+    /*media rule is used in media queries to apply difference styles for different media types/devices. Can be used to check many things such as width and heigh of the viewport, width and height of the device, orientation and resolution. Using media queries is a popular technique for delivering a tailored lstyle sheet to various devices*/
+    
+    /*There are several keywords used wtith @media: 1. not = the not keyword reverses the meaning of an entire media query. 2 only = The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. it has no effect on modern browsers. 3 and = combines a media features with a media type or other media features*/ 
+    
+    /*https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+ 
+    
+    
+    
+    
+}
+
+/*---------------------------------------------*/
+/*Small phones: from 0-480px*/
+/*---------------------------------------------*/
+
+@media only screen and (max-width:480px){ /*media rule is used in media queries to apply difference styles for different media types/devices. Can be used to check many things such as width and heigh of the viewport, width and height of the device, orientation and resolution*/ /*There are several keywords used wtith @media: 1. not = the not keyword reverst the meaning of an entire media query. 2 = The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. it has no effect on modern browsers. 3 and = combines a media features with a media type or other media features*/ /*https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+
+    
+    
+}
