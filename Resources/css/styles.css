@@ -321,6 +321,48 @@ input[type=submit]{
     color: transparent; /*Sets the colour of the text - In this case it needs to be transparent otherwise the gradient above won't work*/
 }
 
+.footer_social_media a:link,
+.footer_social_media a:visited{
+    margin: 0 5px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.footer_social_media .icon_social_media_fb:hover{
+    color: #1877f2;
+}
+
+.footer_social_media .icon_social_media_ig:hover{
+    color: #f46f30;
+}
+
+.footer_social_media .icon_social_media_twt:hover{
+    color: #1da1f2;
+}
+
+.footer_social_media .icon_social_media_pint:hover{
+    color: #bd081c;
+}
+
+.footer_social_media .icon_social_media_wc:hover{
+    color: #7BB32E;
+}
+
+.footer_tags a{
+    color: white;
+    padding: 8px 20px;
+    margin: 5px;
+    border: solid 1px orange;
+    transition: all 0.2s ease
+}
+
+.footer_tags a:hover{
+    background-color: #fa9e2c;
+}
+
+
 /*---------------------------------------------*/
 /*SEARCH TABS BAR*/
 /*---------------------------------------------*/
@@ -893,6 +935,91 @@ textarea{
 }
 
 /*---------------------------------------------*/
+/*Footer*/
+/*---------------------------------------------*/
+
+footer{
+    background-color: var(--purple-solid);
+}
+
+.footer_image{
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.footer_image h3{
+    font-size: 20px;
+    padding: 15px 0 30px 0;
+    text-transform: uppercase;
+}
+
+.footer_social_media{
+    list-style: none;
+    margin: 30px 0;
+}
+
+.footer_tags{
+    display: flex;
+    color: white;
+    font-size: 12px;
+}
+
+.footer_description{
+    margin: 30px 0;
+    line-height: 3rem;
+    color: white;
+}
+
+.blog_post{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 18px 0;
+}
+
+.blog_post_img img{
+    width: auto;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.blog_post_title,
+.blog_post_title a{
+    font-size: 13px;
+    width: 50%;
+}
+
+.blog_post_title a{
+    color: white;
+}
+
+.blog_post_title h5{
+    margin-top: 10px;
+    color: var(--yellow-solid);
+}
+
+.contact_us{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact_us_icon{
+    color: var(--yellow-solid);
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.contact_us_info a{
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+
+/*---------------------------------------------*/
 /*About Us*/
 /*---------------------------------------------*/
 
@@ -932,6 +1059,36 @@ textarea{
     font-style: normal;
 }
 
+.stats_info h3{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
 
+.stats_info p{
+    text-align: center;
+    font-size: 15px;
+}
 
+/*---------------------------------------------*/
+/*Google Maps*/
+/*---------------------------------------------*/
 
+.googlemaps_link{
+    display: flex;
+    text-align: center;
+    width: auto;
+    height: 100%
+}
+
+.contact_us_information{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact_us_information.
+.contact_box{
+    
+}
